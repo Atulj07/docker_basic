@@ -87,4 +87,37 @@ CMD ["python","app.py"]
    ```sh
    docker stop <container_id>
    ```
-<img width="2606" height="1682" alt="image" src="https://github.com/user-attachments/assets/240d2836-3790-445d-b587-a02beda1fea3" />
+
+## Docker Hub
+
+1. Version update — bump the tag for the new release and rebuild:
+
+   ```sh
+   docker build . -t demoappb17b:v2.0
+   ```
+
+2. Create the repository — create `atulj07/demoappb17b` on Docker Hub (via [hub.docker.com](https://hub.docker.com) → Create Repository, or it is created automatically on first push), then log in and tag the image for that namespace:
+
+   ```sh
+   docker login
+   docker tag demoappb17b:v2.0 atulj07/demoappb17b:v2.0
+   ```
+
+3. Push to Docker Hub:
+
+   ```sh
+   docker push atulj07/demoappb17b:v2.0
+   ```
+
+4. Delete the local image:
+
+   ```sh
+   docker image rm atulj07/demoappb17b:v2
+   ```
+
+5. Pull the image back from Docker Hub:
+
+   ```sh
+   docker pull atulj07/demoappb17b:v2.0
+   ```
+
