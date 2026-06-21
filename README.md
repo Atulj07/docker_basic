@@ -121,3 +121,4 @@ CMD ["python","app.py"]
    docker pull atulj07/demoappb17b:v2.0
    ```
 
+<img width="1940" height="1712" alt="image" src="https://github.com/user-attachments/assets/0e7ed88b-9463-4bb9-82ba-1801c99d33ad" />
